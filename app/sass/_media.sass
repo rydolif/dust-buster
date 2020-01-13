@@ -1,0 +1,153 @@
+@media only screen and (max-width : 1440px)
+	.container
+		max-width: 1200px
+
+
+@media only screen and (max-width : 1200px)
+	body
+		font-size: 14px
+
+	h1
+		font-size: 36px
+
+	h2
+		font-size: 30px !important
+
+	h3
+		font-size: 20px
+
+
+	.container
+		max-width: 992px
+
+	.btn
+		font-size: 20px
+		height: 50px
+
+
+@media only screen and (max-width : 992px)
+	body
+		font-size: 14px
+
+	.container
+		max-width: 767px
+
+	.header
+		padding: 5px 0
+
+		&__logo
+			width: 54px
+			margin-right: 10px
+
+		&__nav
+			li
+				padding: 15px 0
+
+				ul
+					padding: 15px
+					width: 400px
+
+					a
+						padding: 15px
+
+		&__info_wrap
+			width: 30px
+			height: 30px
+			margin-right: 10px
+
+		&__cart,
+		&__hard
+			span
+				right: 3px
+
+		&__login
+			font-size: 18px
+
+		&__search
+			&:focus, 
+			&:hover
+				form
+					right: 27px
+
+
+@media only screen and (max-width : 767px)
+	.container
+		max-width: 576px
+
+	h3
+		font-size: 18px
+
+	.hamburger
+		display: block
+
+	.nav
+		position: fixed
+		width: 100vw
+		height: 100vh
+		top: -100%
+		left: 0
+		right: 0
+		bottom: 0
+		flex-direction: column
+		align-items: center
+		text-align: center
+		padding: 
+			top: 40px
+			left: 40px
+			right: 40px
+			bottom: 90px
+		transition: all .6s
+		z-index: 100
+		overflow: auto
+		
+		a
+			font-size: 18px
+
+		li
+			margin-right: 0
+			position: relative
+
+			ul
+				left: 50%
+				transform: translate(-50%, 0)
+				z-index: 1
+
+		&--active
+			top: 72px
+
+
+@media only screen and (max-width : 576px)
+	.container
+		max-width: 100%
+
+	input,
+	textarea
+		font-size: 14px
+
+		&::placeholder
+			font-size: 14px
+
+	input
+		height: 45px
+		line-height: 45px
+
+		&::placeholder
+			line-height: 45px
+
+
+@media only screen and (max-width : 480px)
+	h1
+		font-size: 28px
+
+	.btn
+		max-width: 100%
+		font-size: 16px
+		height: 40px
+
+	.modal
+		padding: 20px
+
+		&__close
+			top: 5px
+			right: 5px
+

@@ -1,0 +1,206 @@
+@import "fonts"
+
+//----------------------fonts---------------------
+$fonts: 'Karla', sans-serif
+$fonts-title: 'Rubik', sans-serif
+//---------------------end-fonts---------------------
+
+//----------------------color---------------------
+$orange: #ffbf68
+$accent: #000
+$text: #252525
+$btn: #666
+$title: #363636
+$blue: #b8e2fb
+
+//---------------------end-color---------------------
+
+body
+	overflow-x: hidden
+	position: relative
+	min-width: 320px
+	font-family: $fonts
+	font-size: 18px
+	color: $text
+	line-height: 1.4
+	font-weight: 400
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	min-height: 100vh
+
+::selection
+	background-color: $accent
+	color: #fff
+
+a, div, ul, li, input, textarea
+	&:hover,
+	&:focus
+		outline: none
+
+h1, h2, h3, h4, h5, h6
+	font-weight: 700
+	line-height: 1.5
+	margin: 0
+	padding: 0
+	font-family: $fonts-title
+
+h1
+	color: $text
+	font-size: 60px
+	font-weight: 700
+	margin-bottom: 15px
+
+h2
+	color: $title
+	font-size: 42px
+	margin-bottom: 25px
+
+h3
+	font-size: 18px
+	margin-bottom: 35px
+
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+i
+	font-style: normal
+	font-size: 16px
+	color: #fff
+
+input, textarea
+	border: none
+	border-bottom: 1px solid #ccc
+	outline: none
+	box-shadow: none
+	-webkit-appearance: none
+	background-color: transparent
+	padding: 0
+	color: $text
+	width: 100%
+	height: 50px
+	line-height: 50px
+	transition: all .6s
+	background-color: #fff
+	
+	&:focus:required:invalid
+		border-color: $accent
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+
+	&:required:valid
+		border-color: green
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+
+	&::placeholder
+		color: #cccccc
+		text-transform: uppercase
+		line-height: 50px
+
+input
+	height: 50px
+	line-height: 50px
+
+	&::placeholder
+		line-height: 50px
+
+textarea
+	resize: none
+	padding-top: 10px
+	line-height: 1.4
+	height: 190px
+
+	&::placeholder
+		line-height: 1.4
+
+sub, sup
+	font-size: 60%
+
+
+b, strong
+	font-weight: 700
+
+p
+	margin: 0
+	padding: 0
+
+a,
+a:focus,
+a:hover
+	outline: none
+	text-decoration: none
+	transition: all .6s
+
+a
+	color: $text
+
+	&:hover,
+	&:focus
+		color: $accent
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button 
+	-webkit-appearance: none
+	margin: 0
+
+
+input[type="number"]
+	-moz-appearance: textfield
+
+input[type="number"]:hover,
+input[type="number"]:focus
+	-moz-appearance: number-input
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+	-webkit-appearance: none
+	margin: 0
+
+
+
+.swiper-pagination-fraction
+	max-width: 75px
+	bottom: 0
+	font-size: 18px
+	font-weight: 700
+	line-height: 1.8
+
+	.swiper-pagination-current
+		font-size: 30px
+
+	.swiper-pagination-total
+		font-weight: 400
+
+.button-next,
+.button-prev,
+.button-next,
+.button-prev
+	position: absolute
+	background-image: url(../img/icon/arrow-next.svg)
+	width: 14px
+	height: 25px
+	background-size: 14px 25px
+	bottom: 0
+	top: auto
+	right: 0
+	left: auto
+	cursor: pointer
+
+.button-prev,
+.button-prev-2
+	background-image: url(../img/icon/arrow-prev.svg)
+	right: 30px
+
+
+@import "_base/preloader"
+@import "_base/animation"
+@import "_base/btn"
+@import "_base/form"
+@import "_base/modal"
+@import "_base/hamburger"
