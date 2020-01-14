@@ -42,7 +42,7 @@
 			</nav>
 
 			<a class="header__tel" href="tel:7209309073">720-930-9073</a>
-			<a href="#" class="btn header__btn">Get a Quote</a>
+			<a href="#" class="order_open btn header__btn">Get a Quote</a>
 
 		</div>
 	</header>
@@ -60,7 +60,7 @@
 
 					<p class="hero__subtitle">Construction Cleaning <span>&</span> Janitorial Services</p>
 
-					<a href="#" class="hero__btn btn">Get a Quote</a>
+					<a href="#" class="order_open hero__btn btn">Get a Quote</a>
 
 				</div>
 			</div>
@@ -142,7 +142,7 @@
 						<p>
 							Are you looking for a quality and professional janitorial company? Look no farther. We offer a wide range of services and packages to meet all your cleaning needs.
 						</p>
-						<a href="#" class="btn services__btn">Get a Quote</a>
+						<a href="#" class="order_open btn services__btn">Get a Quote</a>
 					</div>
 				</div>
 
@@ -156,7 +156,7 @@
 						<p>
 							Are you looking for a quality and professional janitorial company? Look no farther. We offer a wide range of services and packages to meet all your cleaning needs.
 						</p>
-						<a href="#" class="btn services__btn">Get a Quote</a>
+						<a href="#" class="order_open btn services__btn">Get a Quote</a>
 					</div>
 				</div>
 
@@ -170,7 +170,7 @@
 						<p>
 							Are you looking for a quality and professional janitorial company? Look no farther. We offer a wide range of services and packages to meet all your cleaning needs.
 						</p>
-						<a href="#" class="btn services__btn">Get a Quote</a>
+						<a href="#" class="order_open btn services__btn">Get a Quote</a>
 					</div>
 				</div>
 
@@ -184,7 +184,7 @@
 						<p>
 							Are you looking for a quality and professional janitorial company? Look no farther. We offer a wide range of services and packages to meet all your cleaning needs.
 						</p>
-						<a href="#" class="btn services__btn">Get a Quote</a>
+						<a href="#" class="order_open btn services__btn">Get a Quote</a>
 					</div>
 				</div>
 
@@ -198,7 +198,7 @@
 						<p>
 							Are you looking for a quality and professional janitorial company? Look no farther. We offer a wide range of services and packages to meet all your cleaning needs.
 						</p>
-						<a href="#" class="btn services__btn">Get a Quote</a>
+						<a href="#" class="order_open btn services__btn">Get a Quote</a>
 					</div>
 				</div>
 
@@ -212,7 +212,7 @@
 						<p>
 							Are you looking for a quality and professional janitorial company? Look no farther. We offer a wide range of services and packages to meet all your cleaning needs.
 						</p>
-						<a href="#" class="btn services__btn">Get a Quote</a>
+						<a href="#" class="order_open btn services__btn">Get a Quote</a>
 					</div>
 				</div>
 
@@ -226,7 +226,7 @@
 						<p>
 							Are you looking for a quality and professional janitorial company? Look no farther. We offer a wide range of services and packages to meet all your cleaning needs.
 						</p>
-						<a href="#" class="btn services__btn">Get a Quote</a>
+						<a href="#" class="order_open btn services__btn">Get a Quote</a>
 					</div>
 				</div>
 
@@ -237,7 +237,7 @@
 			<div class="work__container container">
 
 				<div class="work__content">
-					<div class="block-title">
+					<div class="work__title">
 						<h2>Our Work</h2>
 						<p>
 							We’re honored that hundreds of families have invited us into their homes to clean and
@@ -272,7 +272,7 @@
 								<span>Before</span>
 								<span>After</span>
 							</p>
-							<div id="container1" class="twentytwenty-container">
+							<div id="container2" class="twentytwenty-container">
 								<!-- The before image is first -->
 								<img src="http://placehold.it/400x200&text=1" />
 								<!-- The after image is last -->
@@ -285,7 +285,7 @@
 								<span>Before</span>
 								<span>After</span>
 							</p>
-							<div id="container1" class="twentytwenty-container">
+							<div id="container3" class="twentytwenty-container">
 								<!-- The before image is first -->
 								<img src="http://placehold.it/400x200&text=1" />
 								<!-- The after image is last -->
@@ -428,13 +428,13 @@
 
 				<form class="contacts__form form">
 					<div class="form__line">
-						<input type="name" placeholder="Name*">
+						<input type="name" name="name" placeholder="Name*">
 					</div>
 					<div class="form__line">
-						<input type="tel" placeholder="phone number*">
+						<input type="tel" name="phone" placeholder="phone number*">
 					</div>
 					<div class="form__line">
-						<input type="email" placeholder="Email*">
+						<input type="email" name="mail" placeholder="Email*">
 					</div>
 					<p class="form__text">
 						By clicking Submit button you agree to the processing of yor personal data
@@ -491,38 +491,37 @@
 		</div>
 	</footer>
 
-	<!-- 	modal -->
-		<div class="modal" id="order">
-			<div class="wrapper">
-				<form action="sendmail.php" class="form" method="post">
-
-					<button class="close order_close" type="button"></button>
-
-					<h3>Оставьте заявку, <br>мы свяжемся с Вами</h3>
-					<input type="hidden" name="subject" value="Узнать подробнее!">
-					<div class="footer__form_line"><input type="text" name="name" placeholder="Имя" required></div>
-					<div class="footer__form_line"><input type="tel" name="phone" required placeholder="Телефон"
-							pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"></div>
-					<div><button type="submit" class="btn footer__form_btn" name="submit"
-							value="отправить">Отправить</button></div>
-					<p>Нажимая на кнопку, вы даете согласие <br>на обработку своих <a href="#" target="_blank">персональных
-							данных</a></p>
-
-				</form>
+	<div class="modal" id="order">
+		<button class="modal__close order_close" type="button">
+			<span></span>
+			<span></span>
+		</button>
+		<form action="sendmail.php" class="modal__form form">
+			<input type="hidden" name="subject" value="Обратный звонок">
+			<div class="form__line">
+				<input type="name" name="name" placeholder="Name*">
 			</div>
-		</div>
+			<div class="form__line">
+				<input type="tel" name="phone" placeholder="phone number*">
+			</div>
+			<div class="form__line">
+				<input type="email" name="mail" placeholder="Email*">
+			</div>
+			<p class="form__text">
+				By clicking Submit button you agree to the processing of yor personal data
+			</p>
+			<button class="form__btn btn">submit</button>
+		</form>
+	</div>
 
-		<div class="modal" id="thanks">
-			<button class="close thanks_close" type="button"></button>
+	<div class="modal" id="thanks">
+		<button class="close thanks_close" type="button"></button>
 
-			<h3>Спасибо <br>за доверие!</h3>
-			<p>Мы обязательно с вами свяжемся!</p>
-		</div>
-	<!-- 	modal end-->
+		<h3>Спасибо <br>за доверие!</h3>
+		<p>Мы обязательно с вами свяжемся!</p>
+	</div>
 
 	<script src="js/scripts.min.js"></script>
-	<script src='libs/twentytwenty/jquery.twentytwenty.js'></script>
-	<script src='libs/twentytwenty/jquery.event.move.js'></script>
-</body>
 
+</body>
 </html>

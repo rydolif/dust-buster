@@ -45,17 +45,14 @@ gulp.task('js', function() {
 		'app/libs/jquery.validate.js', 					//----форма
 		'app/libs/jquery.mask.min.js', 					//----форма
 		'app/libs/jquery.popupoverlay.js', 				//----модалки
-		'app/libs/slick/slick.js', 						//----слайдер
 		'app/libs/swiper/swiper.min.js', 				//----слайдер
-		// 'app/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
-		// 'app/libs/jquery.spincrement.min.js', 		//----цифри анімованні
-		// 'app/libs/masonry.pkgd.js',					//----сетка елементов
-		// 'app/libs/isotope.pkgd.min.js', 				//----сетка елементов + фильтр
+		'app/libs/twentytwenty/jquery.twentytwenty.js', 				//----twentytwenty
+		'app/libs/twentytwenty/jquery.event.move.js', 				//----twentytwenty
 		'app/js/common.js', // Always at the end
-		])
+	])
 	.pipe(plumber())
 	.pipe(concat('scripts.min.js'))
-	.pipe(uglify()) // Mifify js (opt.)
+	// .pipe(uglify()) // Mifify js (opt.)
 	.pipe(gulp.dest('app/js'))
 	.pipe(browsersync.reload({ stream: true }))
 });

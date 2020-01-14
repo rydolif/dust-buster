@@ -1,11 +1,36 @@
 $(function() {
 
+//-------------------------------sliders---------------------------------------
+  var swiper = new Swiper('.reviews__slider', {
+    pagination: {
+      el: '.reviews__pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.reviews__button-next',
+      prevEl: '.reviews__button-prev',
+    },
+  });
+
+  var swiper = new Swiper('.work__slider', {
+    allowTouchMove: false,
+    pagination: {
+      el:  this.querySelector('.work__pagination'),
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: this.querySelector('.work__button-next'),
+      prevEl: this.querySelector('.work__button-prev'),
+    },
+    
+  });
 
 //------------------------------гамбургер-----------------------------
   $('.hamburger').click(function() {
     $(this).toggleClass('hamburger--active');
-    $('nav').toggleClass('nav--active');
-    $('header').toggleClass('header--menu');
+    $('.nav').toggleClass('nav--active');
+    $('.header').toggleClass('header--menu');
+    $('body').toggleClass('no-scroll');
   });
 
 //-------------------------------попандер---------------------------------------
@@ -32,11 +57,13 @@ $(function() {
       messages: {
         name: "Введите Ваше имя",
         phone: "Введите Ваш телефон",
+        email: "Введите Вашу почту",
       },
       submitHandler: function(form) {
         var t = {
           name: jQuery('.form-' + index).find("input[name=name]").val(),
           phone: jQuery('.form-' + index).find("input[name=phone]").val(),
+          email: jQuery('.form-' + index).find("input[name=email]").val(),
           subject: jQuery('.form-' + index).find("input[name=subject]").val()
         };
         ajaxSend('.form-' + index, t);
@@ -70,6 +97,10 @@ $(function() {
       }
   });
 
+  if ($(this).scrollTop()<20){
+      $('.header').removeClass('header--active');
+  }
+
 //-------------------------скорость якоря---------------------------------------
   $(".header__list").on("click","a", function (event) {
       event.preventDefault();
@@ -78,58 +109,37 @@ $(function() {
       $('body,html').animate({scrollTop: top - 60}, 'slow', 'swing');
   });
 
-  //-------------------------------анімація цифр---------------------------------------
-    // var show = true;
-    // var countbox = ".about-statistics__container";
-    // $(window).on("scroll load resize", function () {
-    //     if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
-    //     var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
-    //     var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
-    //     var w_height = $(window).height(); // Высота окна браузера
-    //     var d_height = $(document).height(); // Высота всего документа
-    //     var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
-    //     if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
-    //         $('.about-statistics__item h3').spincrement({
-    //             thousandSeparator: "",
-    //             duration: 2000
-    //         });
-    //         show = false;
-    //     }
-    // });
+//-------------------------------анімація цифр---------------------------------------
+  // var show = true;
+  // var countbox = ".about-statistics__container";
+  // $(window).on("scroll load resize", function () {
+  //     if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
+  //     var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
+  //     var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
+  //     var w_height = $(window).height(); // Высота окна браузера
+  //     var d_height = $(document).height(); // Высота всего документа
+  //     var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
+  //     if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+  //         $('.about-statistics__item h3').spincrement({
+  //             thousandSeparator: "",
+  //             duration: 2000
+  //         });
+  //         show = false;
+  //     }
+  // });
 
-    var swiper = new Swiper('.reviews__slider', {
-      pagination: {
-        el: '.reviews__pagination',
-        type: 'fraction',
-      },
-      navigation: {
-        nextEl: '.reviews__button-next',
-        prevEl: '.reviews__button-prev',
-      },
-    });
-
-    $(".twentytwenty-container").twentytwenty({default_offset_pct: 0.4});
-
-    var swiper = new Swiper('.work__slider', {
-      allowTouchMove: false,
-      pagination: {
-        el:  this.querySelector('.work__pagination'),
-        type: 'fraction',
-      },
-      navigation: {
-        nextEl: this.querySelector('.work__button-next'),
-        prevEl: this.querySelector('.work__button-prev'),
-      },
-      
-    });
       
       
 
 });
 
 //----------------------------------------preloader----------------------------------
-
   $(window).on('load', function(){
     $('.preloader').delay(1000).fadeOut('slow');
   });
 
+
+//----------------------------------------animation----------------------------------
+  $(function(){
+    $(".twentytwenty-container").twentytwenty();
+  });
