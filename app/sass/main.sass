@@ -449,6 +449,51 @@
 		border-radius: 0
 		max-width: 575px
 
+	&--page
+		padding-bottom: 70px
+
+		&__form
+			right: 0
+			top: 60px
+
+		&__info
+			display: flex
+			justify-content: space-between
+			margin-top: 120px
+
+			p
+				width: 55%
+				color: $text
+
+				&:nth-child(2)
+					width: 40%
+
+			a, b
+				color: $text
+
+			a
+				@extend .link
+
+		&__soc
+			a
+				margin-right: 30px
+
+				&::before
+					display: none
+
+				&:last-child
+					margin-right: 0
+
+				img
+					transition: all .6s
+
+				&:hover,
+				&:focus
+					img
+						transform: scale(.8)
+
+
+
 
 .footer
 	background-color: #363636
@@ -506,9 +551,17 @@
 		align-items: center
 		flex-wrap: wrap
 
+		img
+			transition: all .6s
+
 		a
 			color: #fff
 			font-family: $fonts-title
+
+			&:hover,
+			&:focus
+				img
+					transform: scale(.8)
 
 		&_list
 			a
