@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Move In & Move Out Cleaning</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="icon" href="img/favicon.ico">
+	<meta name="theme-color" content="#000">
+
+	<link href="https://fonts.googleapis.com/css?family=Karla:400,700|Rubik:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__container container">
+
+			<button class="hamburger" type="button">
+				<span class="hamburger__box">
+					<span class="hamburger__item"></span>
+				</span>
+			</button>
+
+			<a href="index.html" class="header__logo">
+				<img src="img/logo.svg" alt="logo">
+			</a>
+
+			<nav class="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About us</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+					<li><a href="fag.html">FAQ</a></li>
+					<li><a href="contacts.html">Contacts</a></li>
+				</ul>
+			</nav>
+
+			<a class="header__tel" href="tel:7209309073">720-930-9073</a>
+			<a href="#" class="order_open btn header__btn">Get a Quote</a>
+
+		</div>
+	</header>
+
+	<main class="main">
+
+		<section class="cleaning advantages">
+			<div class="advantages__container container">
+
+				<div class="cleaning__title work__content advantages__content">
+					<b>Our services</b>
+					<h2>Gallery</h2>
+					<p>
+						We’re honored that hundreds of  families have invited us into their homes to clean and help simplify their daily lives
+					</p>
+					<!-- Add Pagination -->
+					<div class="work__pagination pagination"></div>
+					<!-- Add Arrows -->
+					<div class="work__button-next button-next"></div>
+					<div class="work__button-prev button-prev"></div>
+				</div>
+
+				<div class="work__slider swiper-container">
+					<div class="swiper-wrapper">
+
+						<div class="swiper-slide">
+							<img src="img/content/gallery__slide.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/content/gallery__slide.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/content/gallery__slide.jpg" alt="">
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer__container container">
+
+			<div class="footer__copy">
+				<p class="company-name">© 2019, DustBusters</p>
+				<a href="#"><img src="img/content/footer-logo.png" alt=""></a>
+			</div>
+
+			<div class="footer__list">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About us</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+					<li><a href="fag.html">FAQ</a></li>
+					<li><a href="contacts.html">Contacts</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Terms & Conditions</a></li>
+				</ul>
+			</div>
+
+			<div class="footer__information">
+
+				<div class="footer__item-info">
+					<span>15854 E Otero Cir., Centennial, CO 80112</span>
+					<a href="mailto:info@larsengroup.us">info@larsengroup.us</a>
+				</div>
+
+				<div class="footer__item-sosial">
+					<a href="tel:7209309073"><b>720-930-9073</b></a>
+					<div class="footer__item-sosial_list">
+						<a href="#" target="_blank"><img src="img/icon/faceboock.png" alt=""></a>
+						<a href="#" target="_blank"><img src="img/icon/tweeter.png" alt=""></a>
+						<a href="#" target="_blank"><img src="img/icon/whatsapp.png" alt=""></a>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</footer>
+
+	<div class="modal" id="order">
+		<button class="modal__close order_close" type="button">
+			<span></span>
+			<span></span>
+		</button>
+		<form action="sendmail.php" class="modal__form form">
+			<input type="hidden" name="subject" value="Обратный звонок">
+			<div class="form__line">
+				<input type="name" name="name" placeholder="Name*">
+			</div>
+			<div class="form__line">
+				<input type="tel" name="phone" placeholder="phone number*">
+			</div>
+			<div class="form__line">
+				<input type="email" name="mail" placeholder="Email*">
+			</div>
+			<p class="form__text">
+				By clicking Submit button you agree to the processing of yor personal data
+			</p>
+			<button class="form__btn btn">submit</button>
+		</form>
+	</div>
+
+	<div class="modal" id="thanks">
+		<button class="close thanks_close" type="button"></button>
+
+		<h3>Спасибо <br>за доверие!</h3>
+		<p>Мы обязательно с вами свяжемся!</p>
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
