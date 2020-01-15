@@ -106,13 +106,24 @@
 
 
 .hero
+	position: relative
 	padding:
 		top: 120px
 		bottom: 230px
 	background-image: url(../img/content/hero__bg.png)
-	background-size: cover
+	background-size: contain
 	background-position: center
 	background-repeat: no-repeat
+
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		height: 686px
+		background-color: $blue
+		z-index: -1
 	
 	&__container
 		display: flex
@@ -223,7 +234,7 @@
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
-		align-items: center
+		// align-items: center
 
 	&__item
 		position: relative
@@ -250,6 +261,7 @@
 			overflow: hidden
 			padding: 220px 30px 40px
 			background-color: #fff
+			height: 100%
 
 			img
 				position: absolute

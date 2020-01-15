@@ -7,6 +7,7 @@
 		$phone = htmlspecialchars(trim($_POST['phone']));
 		$mail = htmlspecialchars(trim($_POST['mail']));
 		$subject = $_POST['subject'] ? htmlspecialchars(trim($_POST['subject'])) : '';
+		// $to = 'Info@larsengroup.us';
 		$to = 'rudolifrudolif@gmail.com';
 
 		$headers = "From: $SITE_TITLE \r\n";

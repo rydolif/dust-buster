@@ -48,6 +48,7 @@ gulp.task('js', function() {
 		'app/libs/swiper/swiper.min.js', 				//----слайдер
 		'app/libs/twentytwenty/jquery.twentytwenty.js', 				//----twentytwenty
 		'app/libs/twentytwenty/jquery.event.move.js', 				//----twentytwenty
+		'app/libs/jquery.spincrement.min.js', 				//----twentytwenty
 		'app/js/common.js', // Always at the end
 	])
 	.pipe(plumber())
