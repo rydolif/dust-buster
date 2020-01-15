@@ -1,5 +1,24 @@
 $(function() {
 
+
+//------------------------------acardeon---------------------------
+  $(".block__content").slideUp("slow");
+  $(".block").first().addClass('active');
+  $(".faq__active .block__content").slideDown("slow");
+
+  $(".block__header").on("click", function(){
+    if ($(this).parent().hasClass('active')) {
+      $(this).parent().removeClass('active');
+      $(".block__content").slideUp("slow");
+    }
+    else {
+      $(".faq__active .block__content").slideUp("slow");
+      $(".faq__active").removeClass('faq__active');
+      $(this).parent().addClass('faq__active');
+      $(".faq__active .block__content").slideDown("slow");
+    }
+  });
+
 //-------------------------------sliders---------------------------------------
   var swiper = new Swiper('.reviews__slider', {
     pagination: {

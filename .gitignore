@@ -1,10 +1,6 @@
 /node_modules/
-/dist/
-/libs/
 /.git/
 /psd/
-/js/common.js/
-/app/css/
 /.bowerrc/
 /gulpfile.js/
 /.gitignore/

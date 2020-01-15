@@ -523,6 +523,100 @@
 		width: 580px
 
 
+.about
+
+	&__content
+
+		p
+			text-indent: 15px
+
+	&__list
+		display: flex
+		justify-content: space-around
+		flex-wrap: wrap
+		width: 100%
+		margin:
+			top: 55px
+			bottom: 80px
+
+	&__item
+		width: 20%
+		font-weight: 700
+		text-align: center
+
+		span
+			display: block
+
+		&_number
+			font-size: 42px
+
+			
+.faq
+
+	&__content
+
+	&__block
+		width: 100%
+		padding: 40px 0
+		border-bottom: 1px solid #e1e1e1
+
+		&:last-child
+			border: none
+			
+		&_header
+			position: relative
+			font-family: $fonts-title
+			padding-right: 120px
+
+			div
+				position: absolute
+				right: 0
+				top: 0
+				display: block
+				width: 30px
+				height: 30px
+				background-color: $orange
+				border-radius: 4px
+				transition: all .6s
+
+				span
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					display: block
+					background-color: #fff
+					transition: all .6s
+
+					&:nth-child(1)
+						width: 10px
+						height: 2px
+
+					&:nth-child(2)
+						height: 10px
+						width: 2px
+
+		&_content
+			padding: 40px 120px 40px 0
+			text-align: right
+
+
+	&__active
+
+		.block__header
+			div
+				background-color: #e1e1e1
+
+				span
+					&:nth-child(2)
+						height: 0
+
+
+
+
+
+
+
 
 
 @import "page"
